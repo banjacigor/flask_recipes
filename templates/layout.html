@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if title %}
+    <title>Flask Blog - {{ title }}</title>
+    {% else %}
+    <title>Flask Blog</title>
+    {% endif %}
+</head>
+
+<body>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </div>
+    <!--
+    <div style="float: right;">
+        <a href="#">Create new recipe</a>
+        <a href="#">My recipes</a>
+        <a href="#">Did you know?</a>
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+-->
+    <div style="float: right;">
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+    </div>
+
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>
