@@ -25,6 +25,7 @@
 -->
     {% if current_user.is_authenticated %}
     <div style="float: right;">
+        <a href="{{ url_for('account') }}">Account</a>
         <a href="{{ url_for('logout') }}">Logout</a>
     </div>
     {% else %}
@@ -33,7 +34,7 @@
         <a href="{{ url_for('register') }}">Register</a>
     </div>
     {% endif %}
-
+    <br><br>
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
     {% for category, message in messages %}
