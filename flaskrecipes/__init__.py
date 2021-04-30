@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 
 from flask_wtf import CSRFProtect
 
@@ -16,5 +17,6 @@ csrf = CSRFProtect(app)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
 db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
 
 from flaskrecipes import routes
